@@ -25,7 +25,7 @@
             </div>
             
             <ul>
-                <li v-for="toDo in toDoList"> {{toDo}} </li>
+                <li v-for="toDo in toDoList"> {{toDo.text}} </li>
             </ul>
         </div> 
     </main>
