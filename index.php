@@ -17,7 +17,16 @@
 <body>
     <main>
         <div id="app">
-            <h1> {{variable}} </h1>
+            <h1> ToDo List </h1>
+            <div>
+                <label for="to-do"></label>
+                <input type="text" id="to-do" placeholder="Inserisci un nuovo toDo" v-model="newToDo">
+                <button class="btn btn-primary ms-2" @click="addToDo">Salva</button>
+            </div>
+            
+            <ul>
+                <li v-for="toDo in toDoList"> {{toDo}} </li>
+            </ul>
         </div> 
     </main>
   <script src="js/script.js"></script>  
