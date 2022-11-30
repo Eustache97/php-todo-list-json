@@ -28,5 +28,31 @@ createApp({
           this.newToDo = "";
         });
     },
+    doneNotDone(index) {
+      const data = {
+        toggleIndex: index,
+      };
+
+      axios
+        .post("server.php", data, {
+          headers: { "Content-Type": "multipart/form-data" },
+        })
+        .then((resp) => {
+          this.toDoList = resp.data;
+        });
+  },
+  deleteToDo(index) {
+          const data = {
+            deleteIndex: index,
+          };
+    
+          axios
+            .post("server.php",data, {
+              headers: { "Content-Type": "multipart/form-data" },
+            })
+            .then((resp) => {
+              this.todoList = resp.data;
+            });
   }
+}
 }).mount("#app");

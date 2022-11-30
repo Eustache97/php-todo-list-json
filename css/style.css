@@ -11,8 +11,44 @@ body{
     height: 70vh;
     width: 60%;
     margin: 5em auto;
-    
 }
 img{
     max-width: 100%;
+}
+.ms_container{
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+.done{
+    text-decoration:line-through;
+}
+.todolist{
+    height: 40vh;
+    width: 100%;
+    margin-top: 2em; 
+    overflow-y: scroll;
+}
+.todolist ul{
+    width: 100%;
+    list-style-type: none;
+}
+.todolist li{
+    background-color: darkseagreen;
+    border-radius: 10px;
+    margin: .7em 0;
+}
+.todolist li .delete-todo{
+    display: block;
+    color: red;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 2em;
+}
+.todolist li .check-todo{
+    color: green;
+    font-size: 1.5rem;
+}
+.todolist li p{
+    cursor: pointer;
 }
